@@ -1,10 +1,3 @@
-// script/script.js
-
-/**
- * CyberSecurity Dashboard
- * Sistema completo de análise de segurança e privacidade
- */
-
 // Variáveis globais
 let securityScore = 50; // Score base melhorado
 let detectedExtensions = [];
@@ -17,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeAnalysis();
 });
 
-/**
- * Inicializa todas as análises
- */
 async function initializeAnalysis() {
     // Informações básicas do navegador
     getBrowserInfo();
@@ -47,9 +37,6 @@ async function initializeAnalysis() {
     calculateSecurityScore();
 }
 
-/**
- * Obtém informações do navegador
- */
 function getBrowserInfo() {
     const ua = navigator.userAgent;
     let browserName = 'Desconhecido';
@@ -327,9 +314,6 @@ function checkSecurityFeatures() {
     }
 }
 
-/**
- * Verifica AdBlock
- */
 function checkAdBlock() {
     const adDiv = document.createElement('div');
     adDiv.className = 'ad ads adsbygoogle ad-placement ad-placeholder';
@@ -409,9 +393,6 @@ function detectExtensions() {
     }
 }
 
-/**
- * Verifica permissões
- */
 async function checkPermission(type) {
     const statusEl = document.getElementById(`perm-${type}`);
     
@@ -540,9 +521,6 @@ function updateClock() {
     document.getElementById('localTime').textContent = formatted;
 }
 
-/**
- * Calcula score de segurança
- */
 function calculateSecurityScore() {
     setTimeout(() => {
         const scoreEl = document.getElementById('scoreValue');
@@ -593,5 +571,6 @@ function calculateSecurityScore() {
 
 // Exporta funções globais
 window.checkPermission = checkPermission;
+
 
 console.log('%c✅ Dashboard Carregado com Sucesso!', 'color: #10b981; font-size: 14px; font-weight: bold;');
